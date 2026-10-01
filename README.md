@@ -1,121 +1,284 @@
-# Manavta Agro Foods
 
-A full-stack business website and enquiry-management platform for **Manavta Agro Foods**, a parboiled rice mill established in 2016 in Rureke Kalan, Barnala, Punjab, India.
+<div align="center">
 
-The platform presents rice products and milling capabilities and supports quote requests, sample requests, enquiry administration, and customer communication.
+# 🌾 Manavta Agro Foods
 
-> **Release metadata:** The root `package.json` currently declares version `15.0.0`. This README describes the source package; production readiness must be confirmed by running the verification checklist and testing the deployed services.
+### Quality Rice. Trusted Processing. Since 2016.
 
-## Project highlights
+A modern full-stack business website for Manavta Agro Foods, a parboiled rice mill based in Punjab, India.
 
-- Responsive business website and product catalogue
-- Quote and request-a-sample workflows
-- Backend enquiry persistence using MongoDB/Mongoose
-- Idempotency and duplicate-submit protections
-- Admin enquiry management, status updates, and audit events
-- Customer/admin email notification workflow
-- API specification and architecture/deployment documentation
-- Vercel frontend configuration and Render-oriented backend guidance
+<br/>
 
-## Technology
+<a href="https://YOUR-VERCEL-URL.vercel.app">
+  <img src="https://img.shields.io/badge/🌐_Live_Website-Visit_Now-15803d?style=for-the-badge" alt="Live Website"/>
+</a>
+<a href="https://github.com/shubhneet-garg/manavta-agro-foods">
+  <img src="https://img.shields.io/badge/GitHub-Source_Code-181717?style=for-the-badge&logo=github" alt="GitHub"/>
+</a>
+
+<br/><br/>
+
+<img src="https://img.shields.io/badge/React-Frontend-61DAFB?style=flat-square&logo=react&logoColor=black"/>
+<img src="https://img.shields.io/badge/Node.js-Backend-339933?style=flat-square&logo=nodedotjs&logoColor=white"/>
+<img src="https://img.shields.io/badge/Express.js-API-000000?style=flat-square&logo=express&logoColor=white"/>
+<img src="https://img.shields.io/badge/MongoDB-Database-47A248?style=flat-square&logo=mongodb&logoColor=white"/>
+<img src="https://img.shields.io/badge/Vite-Build-646CFF?style=flat-square&logo=vite&logoColor=white"/>
+
+</div>
+
+---
+
+## 📸 Website Snapshot
+
+<div align="center">
+
+![Manavta Agro Foods Website Snapshot](docs/images/homepage.png)
+
+*Manavta Agro Foods — Website Preview*
+
+</div>
+
+---
+
+## 📖 About the Project
+
+**Manavta Agro Foods** is a full-stack digital platform developed for a rice milling business established in 2016 in Punjab, India.
+
+The platform presents the company's rice products, processing capabilities, business information, and customer enquiry workflows through a responsive website.
+
+The project combines a React-based frontend with a Node.js and Express backend, MongoDB data storage, and administrative functionality.
+
+### Business Information
+
+| Detail | Information |
+|---|---|
+| Company | Manavta Agro Foods |
+| Established | 2016 |
+| Industry | Rice Milling & Agro Processing |
+| Location | Rureke Kalan, Barnala, Punjab, India |
+| Primary Business | Parboiled Rice Mill |
+| Packaging | 25–50 kg bulk packs |
+| Email | manavtaagrofood@gmail.com |
+
+---
+
+## ✨ Key Features
+
+### Customer Website
+- Responsive business website
+- Product catalogue and rice variety listings
+- Product search and discovery
+- Business and processing information
+- Quote request workflow
+- Sample request workflow
+- Customer account and portal interfaces
+- Privacy policy, shipping policy and terms pages
+
+### Backend & API
+- REST API architecture
+- MongoDB data persistence
+- Product and category management
+- Enquiry management
+- Authentication and authorization
+- Input validation
+- Centralized error handling
+- Persistent idempotency support
+- Audit logging
+- Email notification workflows
+
+### Engineering
+- Modular backend structure
+- Environment-based configuration
+- Security middleware
+- API documentation
+- Automated test files
+- Deployment and operational documentation
+- Performance and smoke-test scripts
+
+---
+
+## 🛠️ Technology Stack
 
 | Layer | Technologies |
 |---|---|
-| Frontend | React, Vite, HTML, CSS, JavaScript |
-| Backend | Node.js, Express |
+| Frontend | React, JavaScript, CSS |
+| Build Tool | Vite |
+| Backend | Node.js, Express.js |
 | Database | MongoDB, Mongoose |
 | Authentication | JWT |
-| Email | Configurable email provider (see `.env.example` and deployment docs) |
-| Deployment | Vercel (frontend), Render (backend) |
+| API | REST |
+| Deployment | Vercel / Node.js hosting |
+| Version Control | Git, GitHub |
 
-## Repository layout
+---
+
+## 🏗️ Project Architecture
 
 ```text
-Manavta_Agro_Foods/
-├── frontend/       # Public site, account/admin UI, assets and policies
-├── backend/        # Express API, routes, models, middleware and tests
-├── docs/           # OpenAPI and architecture decision records
-├── ops/            # MongoDB backup guidance/scripts
-├── scripts/        # Build, smoke-test and verification utilities
-├── .env.example    # Placeholder configuration only
+manavta-agro-foods/
+│
+├── backend/
+│   ├── src/
+│   │   ├── config/
+│   │   ├── controllers/
+│   │   ├── middleware/
+│   │   ├── models/
+│   │   ├── routes/
+│   │   ├── services/
+│   │   ├── utils/
+│   │   └── validators/
+│   ├── scripts/
+│   ├── tests/
+│   └── package.json
+│
+├── frontend/
+│   ├── images/
+│   ├── icons/
+│   ├── src/
+│   ├── index.html
+│   └── manifest.webmanifest
+│
+├── docs/
+│   ├── ADR-001-modular-monolith.md
+│   ├── ADR-002-order-consistency.md
+│   ├── ADR-003-persistent-idempotency.md
+│   ├── openapi.yaml
+│   └── ROADMAP_IMPLEMENTATION.md
+│
+├── ops/
+├── scripts/
+├── API.md
+├── ARCHITECTURE.md
 ├── DEPLOYMENT.md
 ├── SECURITY.md
 ├── TESTING.md
-└── package.json
+├── package.json
+├── vite.config.js
+└── vercel.json
 ```
 
-## Run locally
+---
 
-Requirements: a supported Node.js LTS release, npm, and MongoDB (local or Atlas).
+## 🚀 Run Locally
+
+### Prerequisites
+
+- Node.js
+- npm
+- MongoDB instance
+- Git
+
+### 1. Clone the repository
 
 ```bash
-npm ci
+git clone https://github.com/shubhneet-garg/manavta-agro-foods.git
 ```
-
-Create a local `.env` from `.env.example`, then fill in the required values:
 
 ```bash
-cp .env.example .env
+cd manavta-agro-foods
 ```
 
-Start the frontend:
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Configure environment variables
+
+Use the provided `.env.example` as a reference.
+
+Create your local `.env` file and configure the required values:
+
+```env
+NODE_ENV=development
+PORT=5000
+MONGODB_URI=your_mongodb_connection_string
+```
+
+Configure the remaining authentication, email, and application variables according to the environment configuration and deployment documentation.
+
+**Never commit real credentials, API keys, JWT secrets, or database passwords.**
+
+### 4. Start the application
 
 ```bash
 npm run dev
 ```
 
-Start the API in a second terminal:
+Use the scripts defined in the root and individual package files if your local setup requires separate frontend and backend processes.
 
-```bash
-npm run backend:dev
-```
+---
 
-Typical local addresses:
+## 📚 Documentation
 
-- Frontend: `http://localhost:5173`
-- API: `http://localhost:5000`
+| Document | Description |
+|---|---|
+| [API Documentation](API.md) | API endpoints and usage |
+| [Architecture](ARCHITECTURE.md) | Application structure |
+| [System Design](SYSTEM_DESIGN.md) | Design overview |
+| [Deployment Guide](DEPLOYMENT.md) | Deployment configuration |
+| [Security](SECURITY.md) | Security considerations |
+| [Testing](TESTING.md) | Testing instructions |
+| [Production Handoff](PRODUCTION_HANDOFF.md) | Deployment handoff and operational notes |
 
-Exact ports and required variables are defined by the current configuration and `.env.example`. Never commit `.env` or real credentials.
+---
 
-## Verification
+## 🔐 Security
 
-Run from the repository root:
+Security considerations implemented in the project include:
 
-```bash
-npm run lint
-npm test
-npm run test:api:smoke
-npm run test:email
-npm run build
-npm audit --workspaces --omit=dev
-```
+- Environment-based secrets
+- Authentication middleware
+- Request validation
+- Centralized error handling
+- Idempotency handling
+- Audit logging
+- Security-related middleware
 
-Some checks require a reachable database, configured email provider, or deployed environment. Record which checks passed; do not describe the project as production-certified until deployment-specific checks have been completed.
+Production security and deployment configuration should be independently verified before handling real customer information.
 
-## API and technical documentation
+---
 
-- `API.md` and `docs/openapi.yaml` — API reference
-- `ARCHITECTURE.md` and `SYSTEM_DESIGN.md` — system design
-- `DEPLOYMENT.md` and `PRODUCTION_HANDOFF.md` — deployment guidance and known verification requirements
-- `SECURITY.md` — security notes
-- `TESTING.md` and `VERIFICATION.md` — test and release checks
-- `CHANGELOG.md` — project changes
+## 🌐 Live Deployment
 
-## Environment and deployment safety
+<div align="center">
 
-- Keep database URIs, JWT secrets, email credentials, and admin passwords in the backend environment only.
-- Treat all `VITE_*` values as public client-side configuration.
-- Do not expose secrets in screenshots, logs, commits, or issue reports.
-- Preserve existing production services and databases while migrating source control or deployment settings.
-- Confirm Vercel/Render environment variables and run smoke tests after any deployment change.
+### Explore Manavta Agro Foods
 
-## Business information
+<a href="https://YOUR-VERCEL-URL.vercel.app">
+  <img src="https://img.shields.io/badge/OPEN_LIVE_WEBSITE-15803d?style=for-the-badge&logo=vercel&logoColor=white" alt="Open Live Website"/>
+</a>
 
-**Manavta Agro Foods**  
-Tajoke Road, Rureke Kalan, District Barnala, Punjab, India  
-Business email: `manavtaagrofood@gmail.com`  
-Established: 2016
+</div>
 
-## License
+---
 
-No open-source license is specified in this package. Add a license only if the project owner intends to grant reuse rights.
+## 👨‍💻 Developer
+
+<div align="center">
+
+### Shubhneet Garg
+
+B.Tech Computer Science Engineering  
+Full Stack Developer | React.js | Node.js | MongoDB
+
+<a href="https://github.com/shubhneet-garg">
+  <img src="https://img.shields.io/badge/GitHub-Shubhneet_Garg-181717?style=for-the-badge&logo=github"/>
+</a>
+
+<a href="https://www.linkedin.com/in/shubhneet-garg/">
+  <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin"/>
+</a>
+
+</div>
+
+---
+
+<div align="center">
+
+**Built with React, Node.js and MongoDB.**
+
+*Manavta Agro Foods · Punjab, India · Est. 2016*
+
+</div>
