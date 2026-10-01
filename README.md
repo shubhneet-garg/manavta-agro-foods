@@ -9,7 +9,7 @@ A modern full-stack business website for Manavta Agro Foods, a parboiled rice mi
 
 <br/>
 
-<a href="https://YOUR-VERCEL-URL.vercel.app">
+<a href="https://manavta-agro-foods.vercel.app/">
   <img src="https://img.shields.io/badge/🌐_Live_Website-Visit_Now-15803d?style=for-the-badge" alt="Live Website"/>
 </a>
 <a href="https://github.com/shubhneet-garg/manavta-agro-foods">
